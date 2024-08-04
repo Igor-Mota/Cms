@@ -1,11 +1,19 @@
+import { apiEndpoint, repositoryName } from "./slicemachine.config.json";
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   srcDir:'src',
   css:['@/assets/css/tailwind.css'],
-  modules:[
-    '@nuxtjs/i18n'
-  ],
+
+  postcss: {
+    plugins: {
+      tailwindcss: {},
+      autoprefixer: {},
+    },
+  },
+
+  modules:['@nuxtjs/i18n', "@nuxtjs/prismic"],
+
   i18n:{
     locales:[
       { code: 'pt', name: 'Português', iso: 'pt-BR', file: 'pt.json' }
@@ -14,4 +22,8 @@ export default defineNuxtConfig({
     lazy:true,
     langDir:'locales'
   },
+
+  prismic: {
+    endpoint: apiEndpoint || repositoryName
+  }
 })

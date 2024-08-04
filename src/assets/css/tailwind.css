@@ -1,8 +1,9 @@
+/* Base Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-
+/* Custom styles */
 :root {
   --color-primary: #1DA1F2;
   --color-secondary: #14171A;
@@ -25,4 +26,12 @@
 
   --color-text-primary: #ffffff;
   --color-text-secondary: #cccccc;
+}
+
+.btn {
+  @apply py-2 px-4 rounded;
+}
+
+.btn-primary {
+  @apply bg-primary text-text-primary;
 }
