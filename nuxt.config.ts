@@ -1,10 +1,10 @@
-import { apiEndpoint, repositoryName } from "./slicemachine.config.json";
+import {  repositoryName } from "./slicemachine.config.json";
 export default defineNuxtConfig({
   compatibilityDate: '2024-04-03',
   devtools: { enabled: true },
   srcDir:'src',
   css:['@/assets/css/tailwind.css'],
-
+  ssr:true,
   postcss: {
     plugins: {
       tailwindcss: {},
@@ -22,8 +22,7 @@ export default defineNuxtConfig({
     lazy:true,
     langDir:'locales'
   },
-
   prismic: {
-    endpoint: apiEndpoint || repositoryName
+    endpoint:  repositoryName
   }
 })

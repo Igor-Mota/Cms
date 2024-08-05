@@ -1,9 +1,7 @@
-/* Base Tailwind directives */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Custom styles */
 :root {
   --color-primary: #1DA1F2;
   --color-secondary: #14171A;
@@ -11,11 +9,9 @@
   --color-success: #17BF63;
   --color-warning: #FFAD1F;
   --color-danger: #E0245E;
-
   --color-text-primary: #000000;
   --color-text-secondary: #555555;
 }
-
 [data-theme='dark'] {
   --color-primary: #0d47a1;
   --color-secondary: #263238;
@@ -23,15 +19,12 @@
   --color-success: #00c853;
   --color-warning: #ffeb3b;
   --color-danger: #d32f2f;
-
   --color-text-primary: #ffffff;
   --color-text-secondary: #cccccc;
 }
-
 .btn {
   @apply py-2 px-4 rounded;
 }
-
 .btn-primary {
   @apply bg-primary text-text-primary;
 }
